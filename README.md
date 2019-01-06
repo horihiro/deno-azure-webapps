@@ -7,7 +7,8 @@ This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web 
 0. Deploy new resource of Web App for Containers
 1. Set the application settings `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to `true`
 ![./application_settings.png](./application_settings.png)
-2. Configure container settings <br>
+2. Deploy your .ts file on `/home/site/wwwroot` of your Web App for Containers.
+3. Configure container settings <br>
     1. Set `Image and optional tag` to `horihiro/deno`
     1. Set `Startup File` to your .ts file and options<br>
        ( ex. `app.ts --allow-net --allow-env` )
