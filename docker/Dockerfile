@@ -1,4 +1,4 @@
-FROM hayd/deno:alpine-0.2.5
+FROM hayd/deno:alpine-0.6.0
 
 # ------------------------
 # SSH Server support
