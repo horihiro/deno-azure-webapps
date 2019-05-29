@@ -38,7 +38,7 @@ echo "/home/site/wwwroot/$@" > /opt/startup/startupCommand
 STARTUPCOMMAND=$(cat /opt/startup/startupCommand)
 
 # make options
-OPTS=$(env | grep WEBSITE_DENO_ | sed -e "s/WEBSITE_DENO_\(.*\)=true/--\1 /" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ_/abcdefghijklmnopqrstuvwxyz-/" | tr -d "\n")
+OPTS=$(env | grep APPSETTING_WEBSITE_DENO_ | sed -E "s/APPSETTING_WEBSITE_DENO_(.*)=true/--\\1 /" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ_/abcdefghijklmnopqrstuvwxyz-/" | tr -d "\n")
 
 echo "Running deno run $OPTS $STARTUPCOMMAND"
 
