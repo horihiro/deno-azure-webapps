@@ -2,31 +2,18 @@
 
 # edit motd
 cat >/etc/motd <<EOL 
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMWNX0OOOOO0KNWMMMMMMMMMMMMMM
-MMMMMMMMMWXOo:'....  ....;lxKWMMMMMMMMMM
-MMMMMMMWOc. .    ..   ..    .:xXMMMMMMMM
-MMMMMW0c.   .. ..........  ....,xNMMMMMM
-MMMMNx'..   ........'... ... .. .cXMMMMM
-MMMWd......  .   ..     ...  ..   :XMMMM
-MMMO' .. ..  .';cll:;'.   .....    oWMMM
-MMWl  ..  .,lO0XMMMWWN0l.  ......  ,KMMM
-MMX:  ....xXNWXNMMMMMMMWO,   .  .. .OMMM
-MMNc   . 'kWMMMMMWNNWWMMMk.      . '0MMM
-MMWd.     .;looolco0XWMMMX:      ..:XMMM
-MMMK:            .dWMMMMMWl     ..'kMMMM
-MMMM0;            lWMMMMMWx.   ...xWMMMM
-MMMMMKc.          lNMMMMMMk.    ;OWMMMMM
-MMMMMMWO:.        lWMMMMMMO'  ,dXMMMMMMM
-MMMMMMMMW0o;..    :0KK0kdoc;ckNMMMMMMMMM
-MMMMMMMMMMMWKkdlc:cllllodx0NWMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMWWWWWMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+     _
+    | |
+  __| |  ___  _ __    ___
+ / _` | / _ \| '_ \  / _ \
+| (_| ||  __/| | | || (_) |
+ \__,_| \___||_| |_| \___/
 
 Documentation: http://aka.ms/webapp-linux
 Deno: https://github.com/denoland/deno
-Deno Version : `deno version`
-Deno Docker Countainer: https://github.com/hayd/deno_docker
+`deno version | sed -E "s/^/  /"`
+This container: https://github.com/horihiro/deno
+  base on Deno Countainer: https://github.com/hayd/deno_docker
 EOL
 cat /etc/motd
 
@@ -34,13 +21,15 @@ cat /etc/motd
 /usr/sbin/sshd
 
 # make startup command
-echo "/home/site/wwwroot/$@" > /opt/startup/startupCommand
+if [ $# -ne 0 ]; then
+  echo "/home/site/wwwroot/$@" > /opt/startup/startupCommand
+else
+  echo "/home/site/wwwroot/default.ts" > /opt/startup/startupCommand
+fi
 STARTUPCOMMAND=$(cat /opt/startup/startupCommand)
 
-# make options
-OPTS=$(env | grep APPSETTING_WEBSITE_DENO_ | sed -E "s/APPSETTING_WEBSITE_DENO_(.*)=true/--\\1 /" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ_/abcdefghijklmnopqrstuvwxyz-/" | tr -d "\n")
-
-echo "Running deno run $OPTS $STARTUPCOMMAND"
+echo "Running deno run -A $STARTUPCOMMAND"
 
 # exec startup command
-eval "exec deno run $OPTS $STARTUPCOMMAND" 
+export DENO_HOME=/home/site/wwwroot
+eval "exec deno run -A $STARTUPCOMMAND" 
