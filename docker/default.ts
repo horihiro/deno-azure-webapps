@@ -28,6 +28,7 @@ async function main() {
   </head>
   <body>
     <div>
+      <span>Welcome to</span>
       <a href="https://deno.land">
         <img src="https://deno.land/images/deno_logo_2.gif">
       </a>

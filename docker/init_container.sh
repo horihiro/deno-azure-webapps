@@ -9,11 +9,10 @@ cat >/etc/motd <<EOL
 | (_| ||  __/| | | || (_) |
  \__,_| \___||_| |_| \___/
 
-Documentation: http://aka.ms/webapp-linux
 Deno: https://github.com/denoland/deno
 `deno version | sed -E "s/^/  /"`
-This container: https://github.com/horihiro/deno
-  base on Deno Countainer: https://github.com/hayd/deno_docker
+Web App for Containers: https://azure.microsoft.com/ja-jp/services/app-service/containers/
+
 EOL
 cat /etc/motd
 

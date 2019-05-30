@@ -1,5 +1,5 @@
 # Docker image for deno on Azure Web App for Containers
-This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web App for Containers, based on [hayd/deno_docker](https://github.com/hayd/deno_docker) and [frol/docker-alpine-glibc
+This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web App for Containers, based on [frol/docker-alpine-glibc
 ](https://github.com/frol/docker-alpine-glibc)
 
 ![./deno_on_webapp.png](./deno_on_webapp.png)
@@ -23,8 +23,7 @@ This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web 
 scratch
   + alpine:3.8                             <-- alpine
       + frolvlad/alpine-glibc:alpine-3.8   <-- add glibc
-          + hayd/deno:alpine-0.6.0         <-- add deno
-              + THIS_IMAGE                 <-- add sshd and handle startup
+          + THIS_IMAGE                     <-- add deno, sshd and handle startup
 ```
 
 ----
