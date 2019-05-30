@@ -22,7 +22,7 @@ This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web 
 scratch
   + alpine:3.8                             <-- alpine
       + frolvlad/alpine-glibc:alpine-3.8   <-- add glibc
-          + hayd/deno:alpine-0.2.5         <-- add deno
+          + hayd/deno:alpine-0.6.0         <-- add deno
               + THIS_IMAGE                 <-- add sshd and handle startup
 ```
 
