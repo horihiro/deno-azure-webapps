@@ -5,7 +5,7 @@ cat >/etc/motd <<EOL
      _
     | |
   __| |  ___  _ __    ___
- / _` | / _ \| '_ \  / _ \
+ / _\` | / _ \| '_ \  / _ \\
 | (_| ||  __/| | | || (_) |
  \__,_| \___||_| |_| \___/
 
@@ -24,7 +24,7 @@ cat /etc/motd
 if [ $# -ne 0 ]; then
   echo "/home/site/wwwroot/$@" > /opt/startup/startupCommand
 else
-  echo "/home/site/wwwroot/default.ts" > /opt/startup/startupCommand
+  echo "/opt/startup/default.ts" > /opt/startup/startupCommand
 fi
 STARTUPCOMMAND=$(cat /opt/startup/startupCommand)
 
