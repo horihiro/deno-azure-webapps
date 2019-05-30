@@ -10,6 +10,7 @@ RUN apk update\
 COPY sshd_config /etc/ssh/
 COPY init_container.sh /opt/startup/
 COPY ssh_setup.sh /tmp
+COPY default.ts /home/site/wwwroot/
 RUN chmod -R +x /tmp/ssh_setup.sh \
   && chmod -R +x /opt/startup \
   && (sleep 1;/tmp/ssh_setup.sh 2>&1 > /dev/null) \
