@@ -2,10 +2,11 @@
 This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web App for Containers, based on [hayd/deno_docker](https://github.com/hayd/deno_docker) and [frol/docker-alpine-glibc
 ](https://github.com/frol/docker-alpine-glibc)
 
+![./deno_on_webapp.png](./deno_on_webapp.png)
+
 ## Usage
 
 0. Deploy new resource of Web App for Containers
-![./deno_on_webapp.png](./deno_on_webapp.png)
 1. Set the application settings `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to `true`
 ![./application_settings.png](./application_settings.png)
 2. Deploy your .ts file on `/home/site/wwwroot` of your Web App for Containers by using FTP, etc.
