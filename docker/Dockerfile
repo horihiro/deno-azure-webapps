@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-glibc:alpine-3.8
+FROM frolvlad/alpine-glibc:alpine-3.9
 
 ENV DENO_VERSION=0.7.0
 
@@ -17,6 +17,7 @@ RUN apk add --no-cache curl openssh-server && \
     chmod -R +x /tmp/ssh_setup.sh && \
     chmod -R +x /opt/startup && \
     (sleep 1;/tmp/ssh_setup.sh 2>&1 > /dev/null) && \
+    mkdir -p /home/site/wwwroot/ && \
     rm -rf /tmp/*
 
 EXPOSE 2222
