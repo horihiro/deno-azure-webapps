@@ -2,6 +2,10 @@
 This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web App for Containers, based on [frol/docker-alpine-glibc
 ](https://github.com/frol/docker-alpine-glibc)
 
+[![](https://images.microbadger.com/badges/image/horihiro/deno.svg)](https://microbadger.com/images/horihiro/deno "Get your own image badge on microbadger.com")
+[![Docker Stars](https://img.shields.io/docker/stars/horihiro/deno.svg?style=flat-square)](https://hub.docker.com/r/horihiro/deno/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/horihiro/deno.svg?style=flat-square)](https://hub.docker.com/r/horihiro/deno/)
+
 ## Setup
 
 1. Deploy new resource of Web App for Containers,<br>
@@ -34,9 +38,9 @@ This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web 
 ## Docker image hierarchy
 ```
 scratch
-  + alpine:3.8                             <-- alpine
-      + frolvlad/alpine-glibc:alpine-3.8   <-- add glibc
-          + THIS_IMAGE                     <-- add deno, sshd and handle startup
+  + alpine:3.9                         <-- alpine
+    + frolvlad/alpine-glibc:alpine-3.9 <-- add glibc
+      + THIS_IMAGE                     <-- add deno, sshd and handle startup
 ```
 
 ----
