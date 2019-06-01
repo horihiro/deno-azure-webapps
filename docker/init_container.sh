@@ -30,5 +30,5 @@ STARTUPCOMMAND=$(cat /opt/startup/startupCommand)
 echo "Running deno run -A $STARTUPCOMMAND"
 
 # exec startup command
-export DENO_HOME=/home/site/wwwroot
+export DENO_DIR=/home/site/wwwroot/.cache/deno
 eval "exec deno run -A $STARTUPCOMMAND" 
