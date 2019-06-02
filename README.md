@@ -31,7 +31,9 @@ This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web 
   ![./startup_settings.png](./startup_settings.png)
 1. Restart and open your web app<br>
   Then following command runs.
-    > deno run -A /home/site/wwwroot/app.ts
+    ```sh
+    deno run -A /home/site/wwwroot/app.ts
+    ```
     
     ![./running_app.png](./running_app.png)
 
