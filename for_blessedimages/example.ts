@@ -32,7 +32,7 @@ const body:Uint8Array = new TextEncoder().encode(`<!DOCTYPE html>
         <img src="https://deno.land/images/deno_logo_4.gif">
       </a>
       <span>on</span>
-      <a href="https://azure.microsoft.com/ja-jp/services/app-service/containers/">
+      <a href="https://docs.microsoft.com/en-us/azure/app-service/containers/">
         <svg id="svg-app-service-containers" viewBox="0 0 15 11.151" style="height: 200px; width: 200px;">
           <polygon points="6.457 0 0 2.147 0 7.476 5.982 9.686 6.451 9.861 6.451 9.859 12.987 7.487 12.987 2.148 6.457 0" fill="#804998"></polygon>
           <polygon points="12.986 7.494 6.458 9.861 6.458 0.009 12.987 2.159 12.986 7.494" fill="#fff" opacity="0.2" style="isolation:isolate"></polygon><polygon points="0.643 7.284 0.692 7.306 0.689 2.651 0.956 2.536 0.956 2.324 0.534 2.497 0.535 7.236 0.643 7.284" opacity="0.5"></polygon>
