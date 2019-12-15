@@ -30,7 +30,7 @@ async function main() {
     <div>
       <span>Welcome to</span>
       <a href="https://deno.land">
-        <img src="https://deno.land/images/deno_logo_2.gif">
+        <img src="https://deno.land/images/deno_logo_4.gif">
       </a>
       <span>on</span>
       <a href="https://azure.microsoft.com/ja-jp/services/app-service/containers/">
