@@ -2,7 +2,7 @@
 
 1. Select an application stack other than `Java` and `Ruby`
   ![](../appstacks.png)
-1. Upload `deno.sh` and ts files to your WebApp via FTP etc.<br>
+1. Upload [`deno.sh`](./deno.sh) and ts files to your WebApp via FTP etc.<br>
    The structure is following.
     ```
     /home/site/wwwroot
