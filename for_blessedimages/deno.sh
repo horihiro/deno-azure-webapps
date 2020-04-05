@@ -26,7 +26,7 @@ Deno: https://deno.land/
 EOL
 
 # install deno
-curl -fsSL "https://deno.land/x/install/install.sh" | sh -s v0.24.0
+curl -fsSL "https://deno.land/x/install/install.sh" | sh
 
 echo "export DENO_INSTALL=\"$HOME/.local\"" >> $HOME/.bashrc
 echo "export PATH=\"\$DENO_INSTALL/bin:\$PATH\"" >> $HOME/.bashrc
