@@ -1,7 +1,7 @@
 # Note
 This repository is archived because this docker container image is no longer needed to run deno on Azure Web App.
 
-Please see **[How to run Deno for App Service on Linux](./for_blessedimages/README.md)**
+Please see **[How to run Deno for App Service on Linux](./for_blessedimages/)**
 
 ----
 
