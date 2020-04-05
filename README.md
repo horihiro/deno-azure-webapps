@@ -1,4 +1,9 @@
-If you don't/can't use custom container, please see **[How to run Deno for App Service on Linux](./for_blessedimages/README.md)**
+# Note
+This repository is archived because this docker container image is no longer needed to run deno on Azure Web App.
+
+Please see **[How to run Deno for App Service on Linux](./for_blessedimages/README.md)**
+
+----
 
 # Docker image for deno on Azure Web App for Containers
 This docker file is  for [deno](https://github.com/denoland/deno/) on Azure Web App for Containers, based on [frol/docker-alpine-glibc
